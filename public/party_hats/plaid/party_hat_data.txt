@@ -1,0 +1,10 @@
+name=Plaid Party Hat
+price=39.99
+
+description:
+Plaid Party Hat
+END
+
+features:
+-Plaid Party Hat
+END

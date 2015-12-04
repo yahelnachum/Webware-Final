@@ -1,0 +1,10 @@
+name=Traffic Party Hat
+price=39.99
+
+description:
+Traffic Party Hat
+END
+
+features:
+-Traffic Party Hat
+END

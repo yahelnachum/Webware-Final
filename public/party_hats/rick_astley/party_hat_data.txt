@@ -1,0 +1,10 @@
+name=Rick Astley Party Hat
+price=39.99
+
+description:
+Rick Astley Party Hat
+END
+
+features:
+-Rick Astley Party Hat
+END

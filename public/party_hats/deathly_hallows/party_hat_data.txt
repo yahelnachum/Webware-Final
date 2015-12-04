@@ -1,0 +1,10 @@
+name=Deathly Hallows Party Hat
+price=39.99
+
+description:
+Deathly Hallows Party Hat
+END
+
+features:
+-Deathly Hallows Party Hat
+END

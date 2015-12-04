@@ -1,0 +1,10 @@
+name=Snow Person Party Hat
+price=39.99
+
+description:
+Snow Person Party Hat
+END
+
+features:
+-Snow Person Party Hat
+END

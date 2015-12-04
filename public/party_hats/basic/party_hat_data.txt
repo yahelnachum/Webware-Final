@@ -1,8 +1,8 @@
-name=Basic Cone
+name=Basic Party Hat
 price=19.99
 
 description:
-The Basic Cone features a very minimalistic design that 
+The Basic Party Hat features a very minimalistic design that 
 goes with any outfit and can be worn to any occasion.
 END
 

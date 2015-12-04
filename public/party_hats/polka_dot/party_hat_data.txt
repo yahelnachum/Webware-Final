@@ -1,0 +1,10 @@
+name=Polka Dot Party Hat
+price=39.99
+
+description:
+Polka Dot Party Hat
+END
+
+features:
+-Polka Dot Party Hat
+END

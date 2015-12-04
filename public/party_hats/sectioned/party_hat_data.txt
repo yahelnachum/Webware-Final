@@ -1,0 +1,10 @@
+name=Sectioned Party Hat
+price=39.99
+
+description:
+Sectioned Party Hat
+END
+
+features:
+-Sectioned Party Hat
+END

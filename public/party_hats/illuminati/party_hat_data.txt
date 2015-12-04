@@ -1,0 +1,10 @@
+name=Illuminati Party Hat
+price=9.99
+
+description:
+Illuminati Party Hat
+END
+
+features:
+-Illuminati Party Hat
+END

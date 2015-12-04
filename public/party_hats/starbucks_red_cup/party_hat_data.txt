@@ -1,0 +1,12 @@
+name=Starbuck's Red Cup Party Hat
+price=39.99
+
+description:
+Yes you guessed it. The war on Christmas has started and
+it all started with this red cup. Tell friends that you are 
+up to date with this trendy social topic.
+END
+
+features:
+-Good conversation starter
+END

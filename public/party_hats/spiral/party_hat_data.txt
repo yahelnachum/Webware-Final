@@ -1,0 +1,10 @@
+name=Spiral Party Hat
+price=39.99
+
+description:
+Spiral Party Hat
+END
+
+features:
+-Spiral Party Hat
+END

@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, '/public')));
 
 app.get('/', function(req, res) {
-  res.send(fs.readFileSync(path.join(__dirname, '/public/party_hats/basic/cone_data.txt')));
+  res.send(fs.readFileSync(path.join(__dirname, '/public/party_hats/basic/party_hat_data.txt')));
 
 });
 
@@ -26,18 +26,18 @@ app.get('/product', function(req, res) {
 });
 
 function createProductPage(name){
-  var data = fs.readFileSync(path.join(__dirname, '/public/party_hats/', name, '/cone_data.txt')).toString();
+  var data = fs.readFileSync(path.join(__dirname, '/public/party_hats/', name, '/party_hat_data.txt')).toString();
   var fullName = ((data.split('name='))[1].split('\n'))[0];
   var price = ((data.split('price='))[1].split('\n'))[0];
-  var description = ((data.split('description:\n'))[1].split('END'))[0];
-  var features = ((data.split('features:\n'))[1].split('END'))[0];
+  var description = (((data.split('description:'))[1]).split('END'))[0];
+  var features = (((data.split('features:'))[1]).split('END'))[0];
   return fullName + price + description + features;
 }
 
 app.get('/list', function(req, res) {
   var query = req.query;
   var searchQuery = query.search;
-  var coneNameList = listOfCones();
+  var coneNameList = listOfPartyHats();
   
   var filtered = coneNameList .filter(function(el) {
     if(el.toLowerCase().indexOf(searchQuery.toLowerCase()) > -1){
@@ -48,11 +48,11 @@ app.get('/list', function(req, res) {
   res.send(filtered);
 });
 
-function listOfCones(){
+function listOfPartyHats(){
   var folderList = fs.readdirSync(path.join(__dirname, '/public/party_hats/'));
   var coneNameList = [];
   folderList.forEach(function (folder, i){
-    var data = fs.readFileSync(path.join(__dirname, '/public/party_hats/', folder, '/cone_data.txt')).toString();
+    var data = fs.readFileSync(path.join(__dirname, '/public/party_hats/', folder, '/party_hat_data.txt')).toString();
     coneNameList[i] = ((data.split('name='))[1].split('\n'))[0];
   });
   return coneNameList;
