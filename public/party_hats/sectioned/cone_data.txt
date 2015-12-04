@@ -1,0 +1,10 @@
+name=Sectioned Cone
+price=39.99
+
+description:
+Sectioned Cone
+END
+
+features:
+-Sectioned Cone
+END

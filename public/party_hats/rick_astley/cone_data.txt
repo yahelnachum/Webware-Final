@@ -1,0 +1,10 @@
+name=Rick Astley Cone
+price=39.99
+
+description:
+Rick Astley Cone
+END
+
+features:
+-Rick Astley Cone
+END

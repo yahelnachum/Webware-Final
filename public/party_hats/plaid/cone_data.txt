@@ -1,0 +1,10 @@
+name=Plaid Cone
+price=39.99
+
+description:
+Plaid Cone
+END
+
+features:
+-Plaid Cone
+END

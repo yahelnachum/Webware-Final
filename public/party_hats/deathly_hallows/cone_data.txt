@@ -1,0 +1,10 @@
+name=Deathly Hallows Cone
+price=39.99
+
+description:
+Deathly Hallows Cone
+END
+
+features:
+-Deathly Hallows Cone
+END

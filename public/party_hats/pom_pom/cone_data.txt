@@ -1,0 +1,10 @@
+name=Pom Pom Cone
+price=39.99
+
+description:
+Pom Pom Cone
+END
+
+features:
+-Pom Pom Cone
+END

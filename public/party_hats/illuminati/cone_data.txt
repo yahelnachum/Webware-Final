@@ -1,0 +1,10 @@
+name=Illuminati Cone
+price=9.99
+
+description:
+Illuminati Cone
+END
+
+features:
+-Illuminati Cone
+END

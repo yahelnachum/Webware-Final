@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CS4241-B15 Homework Assignment 5</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Original File Structure Author: CS 4241 Staffs -->
+    <!-- Author: Yahel Nachum -->
+    <!-- Website link: https://yn-cs4241-main-a5.herokuapp.com/ -->
+  </head>
+<body>
+  <div class="forms">
+  <form onsubmit="return false;">
+    <label for="POST-search">Search Through Movies:</label>
+    <input id="POST-search" type="text" name="search">
+    <input id="POST-submit" type="submit" value="Submit" onclick="filterSubmit();">
+  </form>
+  <br>
+  <form onsubmit="return false;">
+    <label for="POST-title">Add / remove movie:</label>
+    <input id="POST-title" type="text" name="title">
+    <input id="POST-add" type="submit" value="Add" onclick="addTitle();">
+    <input id="POST-remove" type="submit" value="Remove" onclick="removeTitle();">
+  </form>
+  </div>
+  <ul id="movies"></ul>
+</body>
+
+<script>
+
+  function addTitle(){
+    var title = document.getElementById('POST-title');
+
+    var reqp = new XMLHttpRequest();
+    reqp.open('POST', '/add');
+    reqp.onload = function () {
+      makeGet('/list', "");
+    };
+
+    reqp.send('title='+title.value);
+  }
+
+  function removeTitle(){
+    var title = document.getElementById('POST-title');
+
+    var reqp = new XMLHttpRequest();
+    reqp.open('POST', '/remove');
+    reqp.onload = function () {
+      makeGet('/list', "");
+    };
+
+    reqp.send('title='+title.value);
+
+  }
+
+  function filterSubmit(){
+    var el = document.getElementById('POST-search');
+    window.history.pushState("","","/querying?filterQuery="+el.value);
+    makeGet('/list', el.value);
+  }
+  
+  var path = window.location.href.toString();
+  var parts = path.split('=');
+  if(path.indexOf('querying') < 0)
+    makeGet('/list', "");
+  else
+    makeGet('/list', parts[1]);
+
+  function makeGet(url, filterQuery) {
+    var req = new XMLHttpRequest();
+
+    req.onreadystatechange = function() {
+      handleRes(req, filterQuery);
+    }
+
+    req.open('GET', url);
+    req.send();
+  }
+
+  function handleRes(req, filterQuery) {
+    if( req.readyState !== XMLHttpRequest.DONE )
+      return;
+
+    if(req.status === 200)
+      buildList( JSON.parse(req.responseText), filterQuery);
+  }
+
+  function buildList(list, filterQuery) {
+    var el = document.getElementById('movies');
+    el.innerHTML = "";
+
+    var filtered = list.filter(function(el) {
+      if(el.toLowerCase().indexOf(filterQuery.toLowerCase()) > -1){
+        return el;
+      }
+    });
+
+    filtered.forEach( function(d) {
+      el.innerHTML += '<li>' + d + '</li>';
+    });
+  }
+
+</script>
+</html>

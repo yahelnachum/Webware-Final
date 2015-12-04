@@ -1,0 +1,27 @@
+/* Author: Yahel Nachum */
+/* Website link: https://yn-cs4241-main-a5.herokuapp.com/ */
+
+body {
+  width: 1000px;
+  margin: auto;
+  margin-top: 100px;
+  background-color: rgb(150,150,180);
+}
+
+div.forms {
+  font-size: 3em;
+  padding: 50px;
+  border-radius: 50px;
+  background-color: rgb(180,180,220);
+}
+
+ul {
+  font-size: 2em;
+  padding: 100px;
+  border-radius: 50px;
+  background-color: rgb(230,230,250);
+}
+
+input {
+  font-size: 0.9em;
+}

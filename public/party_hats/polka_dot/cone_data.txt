@@ -1,0 +1,10 @@
+name=Polka Dot Cone
+price=39.99
+
+description:
+Polka Dot Cone
+END
+
+features:
+-Polka Dot Cone
+END

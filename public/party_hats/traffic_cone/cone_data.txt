@@ -1,0 +1,10 @@
+name=Traffic Cone
+price=39.99
+
+description:
+Traffic Cone
+END
+
+features:
+-Traffic Cone
+END

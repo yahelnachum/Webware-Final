@@ -1,0 +1,12 @@
+name=Basic Cone
+price=19.99
+
+description:
+The Basic Cone features a very minimalistic design that 
+goes with any outfit and can be worn to any occasion.
+END
+
+features:
+-Good for any Occasion
+-Minimalist style
+END

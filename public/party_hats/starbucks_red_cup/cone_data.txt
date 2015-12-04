@@ -1,0 +1,10 @@
+name=Starbuck's Red Cup Cone
+price=39.99
+
+description:
+Starbuck's Red Cup Cone
+END
+
+features:
+-Starbuck's Red Cup Cone
+END

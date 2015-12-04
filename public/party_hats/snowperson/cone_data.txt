@@ -1,0 +1,10 @@
+name=Snow Person Cone
+price=39.99
+
+description:
+Snow Person Cone
+END
+
+features:
+-Snow Person Cone
+END
