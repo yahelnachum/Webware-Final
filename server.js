@@ -8,6 +8,7 @@ var port = process.env.PORT || 3000;
 var bodyParser = require("body-parser");
 var pg = require('pg');
 var fs = require('fs');
+var bcrypt = require('bcryptjs');
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.use(express.static(path.join(__dirname, '/public')));
@@ -57,6 +58,54 @@ function listOfPartyHats(){
   });
   return coneNameList;
 }
+
+app.get('/login', function(req, res) {
+  var query = req.query;
+  var usernameQuery = query.username;
+  var passwordQuery = query.password;
+
+  //res.write(bcrypt.hashSync(passwordQuery));
+
+  var usernameFileList = fs.readdirSync(path.join(__dirname, '/user_information/'));
+  
+  if(usernameFileList.indexOf(usernameQuery + '.txt') === -1){
+    res.write('Username not found in system!');
+  }
+  else{
+    var data = fs.readFileSync(path.join(__dirname, '/user_information/', usernameQuery + '.txt')).toString();
+    var hashedPassword = (((data.split('password='))[1]).split("END"))[0];
+    
+    if(bcrypt.compareSync(passwordQuery, hashedPassword)){
+      res.write('Password Accepted');
+    }
+    else{
+      res.write('Password Denied');
+    }
+  }
+  
+  res.end();
+});
+
+app.get('/register', function(req, res) {
+  var query = req.query;
+  var usernameQuery = query.username;
+  var passwordQuery = query.password;
+
+  var usernameFileList = fs.readdirSync(path.join(__dirname, '/user_information/'));
+  
+  if(usernameFileList.indexOf(usernameQuery + '.txt') === -1){
+    var fileContents = 'password=' + bcrypt.hashSync(passwordQuery) + 'END\n\nwishlist:\nEND';
+    fs.writeFileSync(path.join(__dirname, '/user_information/', usernameQuery + '.txt'), fileContents);
+    res.write('Username and Password submitted');
+  }
+  else{
+    res.write('Username not available!');
+  }
+  
+  res.end();
+});
+
+
 
 app.listen(port, function() {
   console.log('App is listening on port ' + port);

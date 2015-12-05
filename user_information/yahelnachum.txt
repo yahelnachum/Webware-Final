@@ -1,0 +1,4 @@
+password=$2a$10$LOgEq1vxPwqvMI1hcvrRx.kdzljyGFVKStCXgCHr.5pHMV09cwcdiEND
+
+wishlist:
+END
