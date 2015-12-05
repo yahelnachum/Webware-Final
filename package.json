@@ -8,9 +8,9 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "~4.9.0",
+    "bcryptjs": "2.3.0",
     "body-parser": "~1.9.1",
+    "express": "~4.9.0",
     "pg": "~4.4.3"
-    "bcryptjs": "2.3.0"
   }
 }
