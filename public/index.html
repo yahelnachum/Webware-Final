@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>CS4241-B15 Homework Assignment 5</title>
+    <title>Party Hat Store</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/main.css">
     <!-- Original File Structure Author: CS 4241 Staffs -->
@@ -9,26 +9,30 @@
     <!-- Website link: https://yn-cs4241-main-a5.herokuapp.com/ -->
   </head>
 <body>
+
+  <header id = "top">
   <div class="forms">
   <form onsubmit="return false;">
-    <label for="POST-search">Search Through Movies:</label>
-    <input id="POST-search" type="text" name="search">
+    <label for="POST-search">Insert image</label>
+    <input id="POST-search" type="text" name="search" placeholder= "Search for hats">
     <input id="POST-submit" type="submit" value="Submit" onclick="filterSubmit();">
   </form>
-  <br>
-  <form onsubmit="return false;">
-    <label for="POST-title">Add / remove movie:</label>
-    <input id="POST-title" type="text" name="title">
-    <input id="POST-add" type="submit" value="Add" onclick="addTitle();">
-    <input id="POST-remove" type="submit" value="Remove" onclick="removeTitle();">
-  </form>
   </div>
-  <ul id="movies"></ul>
+  </header>
+  <br>
+  <section id = "banner"> 
+  Here we will put featured products
+  </section>
+  <br>
+  <ul id="hats">
+  <li> here we will load all the hats </li>
+  </ul>
 </body>
 
+ 
 <script>
 
-  function addTitle(){
+  /** function addTitle(){
     var title = document.getElementById('POST-title');
 
     var reqp = new XMLHttpRequest();
@@ -52,7 +56,7 @@
     reqp.send('title='+title.value);
 
   }
-
+**/
   function filterSubmit(){
     var el = document.getElementById('POST-search');
     window.history.pushState("","","/querying?filterQuery="+el.value);
@@ -101,4 +105,5 @@
   }
 
 </script>
+
 </html>

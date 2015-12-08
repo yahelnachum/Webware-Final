@@ -1,0 +1,29 @@
+body{
+	background-color: white;
+}
+
+.product{
+	width: 50%;
+	margin: auto;
+	text-align: left;
+	border-style: solid;
+	height: 300px;
+	padding: 20px;
+}
+
+ul{
+	display: block;
+	float: right;
+	padding: 20px;
+	font-size: 20px;
+}
+
+li{
+	padding: 5px;
+}
+#buy{
+	display: block;
+	float: right;
+	padding: 20px;
+	
+}

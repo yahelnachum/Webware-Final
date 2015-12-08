@@ -2,26 +2,57 @@
 /* Website link: https://yn-cs4241-main-a5.herokuapp.com/ */
 
 body {
-  width: 1000px;
+  width: 100%;
   margin: auto;
-  margin-top: 100px;
-  background-color: rgb(150,150,180);
+  background-color: white;
 }
 
 div.forms {
   font-size: 3em;
   padding: 50px;
-  border-radius: 50px;
   background-color: rgb(180,180,220);
+  float: right;
+  width: 100%;
+  text-align: center;
 }
 
 ul {
   font-size: 2em;
+  position: fixed;
+  top: 450px;
   padding: 100px;
   border-radius: 50px;
-  background-color: rgb(230,230,250);
+  background-color: white;
 }
 
 input {
   font-size: 0.9em;
+}
+
+#banner{
+	border-style: solid;
+	background-color: #8c8c8c;
+	width: 100%;
+	margin: auto;
+	height: 300px;
+	position: fixed;
+	top: 150px;
+}
+
+#top{
+	width: 100%;
+	margin: auto;
+}
+
+#logo{
+	float: left;
+	width: 100px;
+	height: 200px;
+}
+
+header{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 150px;
 }
