@@ -27,7 +27,7 @@ app.get('/product', function(req, res) {
 });
 
 function createProductPage(name){
-  var hatPageTemplate = fs.readFileSync(path.join(__dirname, '/public/hat.html/')).toString();
+  var hatPageTemplate = fs.readFileSync(path.join(__dirname, '/public/hat.html')).toString();
   var data = fs.readFileSync(path.join(__dirname, '/public/party_hats/', name, '/party_hat_data.txt')).toString();
   var imgSRC = 'jh-yn-final-cs4241.herokuapp.com/party_hats/' + name + '/party_hat_img.jpg';
   var fullName = ((data.split('name='))[1].split('\n'))[0];
