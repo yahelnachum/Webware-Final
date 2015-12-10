@@ -27,12 +27,19 @@ app.get('/product', function(req, res) {
 });
 
 function createProductPage(name){
+  var hatPageTemplate = fs.readFileSync(path.join(__dirname, '/public/hat.html/')).toString();
   var data = fs.readFileSync(path.join(__dirname, '/public/party_hats/', name, '/party_hat_data.txt')).toString();
+  var imgSRC = 'jh-yn-final-cs4241.herokuapp.com/party_hats/' + name + '/party_hat_img.jpg';
   var fullName = ((data.split('name='))[1].split('\n'))[0];
   var price = ((data.split('price='))[1].split('\n'))[0];
   var description = (((data.split('description:'))[1]).split('END'))[0];
   var features = (((data.split('features:'))[1]).split('END'))[0];
-  return fullName + price + description + features;
+
+  var finishedHatPage = hatPageTemplate.replace('SRCPlaceholder',imgSRC);
+  finishedHatPage = finishedHatPage.replace('NamePlaceholder',fullName);
+  finishedHatPage = finishedHatPage.replace('DescriptionPlaceholder',description);
+  finishedHatPage = finishedHatPage.replace('PricePlaceholder',price);
+  return finishedHatPage;
 }
 
 app.get('/list', function(req, res) {
