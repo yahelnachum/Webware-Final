@@ -1,0 +1,52 @@
+body{
+	
+}
+
+header{
+	background-color: gray;
+	height: 150px;
+	width: 100%;
+	margin: auto;
+	text-align: center;
+	padding: 20px;
+}
+
+input[type="text"]{
+	margin: 5px;
+	border: 1px solid;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	box-shadow: 2px 2px 3px #666;
+	padding: 4px 7px;
+	outline: 0;
+	width: 200px;
+}
+
+input[type="password"]{
+	margin: 5px;
+	border: 1px solid;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	box-shadow: 2px 2px 3px #666;
+	padding: 4px 7px;
+	outline: 0;
+	width: 200px;
+}
+
+form{
+	padding: 50px;
+	display: block;
+	text-align: center;
+	margin: auto;
+	background-color: #99ccff;
+	width: 450px;
+}
+
+input[type="submit"]{
+	padding: 0 3px 0 3px;
+	width: 100px;
+	height: 50px;
+	vertical-align: middle;
+	float: center;
+	margin: 5px;
+}
