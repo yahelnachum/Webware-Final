@@ -48,9 +48,9 @@ app.get('/list', function(req, res) {
   var coneNameList = listOfPartyHats();
   
   var filtered = coneNameList .filter(function(el) {
-    //if(el.toLowerCase().indexOf(searchQuery.toLowerCase()) > -1){
+    if(el.toLowerCase().indexOf(searchQuery.toLowerCase()) > -1){
       return el;
-    //}
+    }
   });
 
   res.send(filtered);
