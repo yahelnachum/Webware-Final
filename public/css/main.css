@@ -5,15 +5,18 @@ body {
   width: 100%;
   margin: auto;
   background-color: white;
+  overflow: auto;
 }
 
 div.forms {
-  font-size: 3em;
-  padding: 50px;
-  background-color: rgb(180,180,220);
+  font-size: 40px;
+  padding: 5px;
+  background-color: gray;
   float: right;
   width: 100%;
   text-align: center;
+  margin: auto;
+  vertical-align: middle;
 }
 
 ul {
@@ -21,8 +24,13 @@ ul {
   position: fixed;
   top: 450px;
   padding: 100px;
-  border-radius: 50px;
-  background-color: white;
+}
+
+li{
+	width: auto;
+	float: left;
+	margin: 20px;
+	padding: 5px,
 }
 
 input {
@@ -36,7 +44,7 @@ input {
 	margin: auto;
 	height: 300px;
 	position: fixed;
-	top: 150px;
+	top: 190px;
 }
 
 #top{
@@ -51,8 +59,30 @@ input {
 }
 
 header{
-	position: fixed;
-	top: 0;
-	width: 100%;
+	background-color: gray;
 	height: 150px;
+	width: 100%;
+	margin: auto;
+	text-align: center;
+	padding: 20px;
+}
+
+#POST-submit{
+	cursor: pointer;
+}
+
+a:link{
+	color: black;
+}
+
+a:visited{
+	color: white;
+}
+
+a:hover{
+	color: white;
+}
+
+a:active{
+	color: white;
 }
