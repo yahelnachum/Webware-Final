@@ -17,7 +17,17 @@
 		<p id="total"> <span style="text-decoration: underline">Total Price:</span> &nbsp&nbsp&nbsp&nbsp&nbsp</p>
 		<p></p>
 		<p id="price"> $$$ &nbsp&nbsp&nbsp&nbsp&nbsp</p>
-		<button type="button" name="buy" >Confirm Purchase</button>
+		<button type="button" name="buy" onclick= "buy()"; >Confirm Purchase</button>
 	</div>
 	</body>
+	
+	<script>
+	
+	function buy(){
+		var r = confirm("Are you sure you would like to make this purchase?");
+		if (r == true){
+			document.location.href = "index.html";
+		}
+	};
+	</script>
 </html>
