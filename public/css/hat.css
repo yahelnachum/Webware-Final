@@ -39,11 +39,10 @@ li{
 	padding: 5px;
 }
 #buy{
-	display: block;
-	float: right;
-	padding: 20px;
-	cursor: pointer;
-	
+	margin: auto;
+	margin-top: 20px;
+	padding: 50px 100px;
+	transform: translateX(-100px);
 }
 
 a:link{
