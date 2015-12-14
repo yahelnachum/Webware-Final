@@ -13,11 +13,10 @@ header{
 
 .product{
 	width: 50%;
-	height: 1500px;
 	margin: auto;
 	text-align: left;
 	border-style: solid;
-	height: 300px;
+	height: 970px;
 	padding: 20px;
 }
 
@@ -32,7 +31,6 @@ ul{
 
 .imgLeft {
 	display: block;
-	height: 200px;
 	width: 50%;
 	float: left;
 }
