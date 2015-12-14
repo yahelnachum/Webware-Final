@@ -14,8 +14,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, '/public')));
 
 app.get('/', function(req, res) {
-  res.send(fs.readFileSync(path.join(__dirname, '/public/party_hats/basic/party_hat_data.txt')));
-
+  res.sendFile(path.join(__dirname, '/public/index.html'));
 });
 
 app.get('/product', function(req, res) {
@@ -46,14 +45,16 @@ app.get('/list', function(req, res) {
   var query = req.query;
   var searchQuery = query.search;
   var coneNameList = listOfPartyHats();
-  
-  var filtered = coneNameList .filter(function(el) {
-    if(el.toLowerCase().indexOf(searchQuery.toLowerCase()) > -1){
+
+  if(searchQuery != undefined){
+  var filtered = coneNameList.filter(function(el) {
+    if(el.fullName.toLowerCase().indexOf(searchQuery.toLowerCase()) > -1){
       return el;
     }
   });
-
   res.send(filtered);
+  }
+  res.end();
 });
 
 function listOfPartyHats(){
@@ -61,7 +62,12 @@ function listOfPartyHats(){
   var coneNameList = [];
   folderList.forEach(function (folder, i){
     var data = fs.readFileSync(path.join(__dirname, '/public/party_hats/', folder, '/party_hat_data.txt')).toString();
-    coneNameList[i] = ((data.split('name='))[1].split('\n'))[0];
+    var coneObj = {imgSRC:"",fullName:"",price:"",folderName:""};
+    coneObj.imgSrc = 'http://jh-yn-final-cs4241.herokuapp.com/party_hats/' + folder + '/party_hat_img.jpg';
+    coneObj.fullName = ((data.split('name='))[1].split('\n'))[0];
+    coneObj.price = ((data.split('price='))[1].split('\n'))[0];
+    coneObj.folderName = folder;
+    coneNameList[i] = coneObj;
   });
   return coneNameList;
 }
