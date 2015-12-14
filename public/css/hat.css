@@ -38,11 +38,13 @@ ul{
 li{
 	padding: 5px;
 }
+.button{
+	text-align: center;
+}
+
 #buy{
-	margin: auto;
-	margin-top: 20px;
-	padding: 50px 100px;
-	transform: translateX(-100px);
+position: absolute;
+top: 750px;
 }
 
 a:link{
