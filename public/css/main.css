@@ -5,7 +5,7 @@ body {
   width: 100%;
   margin: auto;
   background-color: white;
-  overflow: auto;
+  overflow: scroll;
 }
 
 div.forms {
