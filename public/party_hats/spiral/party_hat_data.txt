@@ -1,10 +1,10 @@
 name=Spiral Party Hat
-price=39.99
+price=$39.99
 
 description:
-Spiral Party Hat
+Like the sectioned party hat, but with more fun!
 END
 
 features:
--Spiral Party Hat
+-Spiral design everyone will love
 END

@@ -1,5 +1,5 @@
 name=Starbuck's Red Cup Party Hat
-price=39.99
+price=$39.99
 
 description:
 Yes you guessed it. The war on Christmas has started and

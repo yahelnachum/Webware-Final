@@ -1,10 +1,10 @@
 name=Pom Pom Party Hat
-price=39.99
+price=$39.99
 
 description:
-Pom Pom Party Hat
+Like a regular party hat... but with a pom pom
 END
 
 features:
--Pom Pom Party Hat
+-Pom Pom 
 END

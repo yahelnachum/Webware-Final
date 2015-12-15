@@ -2,9 +2,9 @@ name=Illuminati Party Hat
 price=9.99
 
 description:
-Illuminati Party Hat
+Status confirmed
 END
 
 features:
--Illuminati Party Hat
+-Secret
 END

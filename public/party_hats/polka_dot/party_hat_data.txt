@@ -1,10 +1,10 @@
 name=Polka Dot Party Hat
-price=39.99
+price=$39.99
 
 description:
-Polka Dot Party Hat
+Perfect for birthdays, or if you're a clown!
 END
 
 features:
--Polka Dot Party Hat
+-A lot of circles!
 END

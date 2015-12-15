@@ -1,10 +1,11 @@
 name=Rick Astley Party Hat
-price=39.99
+price=$39.99
 
 description:
-Rick Astley Party Hat
+Never gonna give you up, never gonna let you down
 END
 
 features:
--Rick Astley Party Hat
+-Plays music so you can Rick roll everyone in style
+-Never gonna run around and desert you
 END

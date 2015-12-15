@@ -1,10 +1,10 @@
 name=Plaid Party Hat
-price=39.99
+price=$39.99
 
 description:
-Plaid Party Hat
+Perfect for the lumberjack in all of us. Perfect to wear every friday.
 END
 
 features:
--Plaid Party Hat
+-Comfy flannel material
 END

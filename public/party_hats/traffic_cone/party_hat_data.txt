@@ -1,10 +1,10 @@
 name=Traffic Party Hat
-price=39.99
+price=$39.99
 
 description:
-Traffic Party Hat
+Impress all your construction worker friends with this special edition party hat
 END
 
 features:
--Traffic Party Hat
+-Stops traffic
 END

@@ -1,5 +1,5 @@
 name=Basic Party Hat
-price=19.99
+price=$19.99
 
 description:
 The Basic Party Hat features a very minimalistic design that 

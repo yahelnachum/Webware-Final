@@ -1,10 +1,10 @@
 name=Deathly Hallows Party Hat
-price=39.99
+price=$39.99
 
 description:
-Deathly Hallows Party Hat
+For the Harry Potter fan, this hat gives you a magical experience no matter the occasion
 END
 
 features:
--Deathly Hallows Party Hat
+-Elder Wand not included
 END
