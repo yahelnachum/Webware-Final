@@ -1,5 +1,5 @@
 name=Illuminati Party Hat
-price=9.99
+price=$&infin;
 
 description:
 Status confirmed

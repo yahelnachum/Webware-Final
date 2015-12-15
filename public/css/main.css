@@ -10,10 +10,11 @@ div.forms {
   font-size: 40px;
   padding: 5px;
   background-color: gray;
-  float: right;
-  width: 100%;
+  float: center;
+  width: 50%;
   text-align: center;
   margin: auto;
+  height: 90%;
   vertical-align: middle;
 }
 
@@ -61,8 +62,7 @@ input {
 
 #logo{
 	float: left;
-	width: 100px;
-	height: 200px;
+	height: 150px;
 }
 
 header{
@@ -113,5 +113,5 @@ a:active{
 }
 
 .miniPrice {
-  font-size: 0.5em;
+  font-size: 0.75em;
 }
