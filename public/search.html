@@ -34,7 +34,7 @@ if(req.readyState == XMLHttpRequest.DONE && req.status === 200){
 	var hatList = document.getElementById('content');
 	console.log('here1');
 	hatObjList.forEach(function (el, index) {
-		hatList.innerHTML += compiled({el});
+		hatList.innerHTML += el;
            console.log(compiled({el}));
 	});
 	console.log('here1');

@@ -21,7 +21,8 @@
   </header>
 
   <section id = "banner"> 
-  Here we will put featured products
+  <ul id="featuredHats">
+  </ul>
   </section>
   <br>
   <ul id="hats">
@@ -42,12 +43,21 @@ if(req.readyState == XMLHttpRequest.DONE && req.status === 200){
            console.log(compiled({el}));
 	});
 	console.log('here1');
+
+	var numOfFeatured = 3;
+	console.log(parseInt(Math.random() * 3) + 1);
+	var bannerElement = document.getElementById("featuredHats");
+	while(numOfFeatured != 0){
+		var index = parseInt(Math.random() * hatObjList.length);
+		var el = hatObjList[index];
+		bannerElement.innerHTML += compiled({el}).replace("miniPage", "miniFeaturedPage");
+		numOfFeatured -= 1;
+	}
 }
 }
 console.log('hello');
 req.open('GET', '/list?search=&data=true');
 req.send();
-
 </script>
 
 </html>
