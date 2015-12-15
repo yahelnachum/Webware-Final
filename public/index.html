@@ -45,7 +45,7 @@ if(req.readyState == XMLHttpRequest.DONE && req.status === 200){
 }
 }
 console.log('hello');
-req.open('GET', '/list?search=');
+req.open('GET', '/list?search=&data=true');
 req.send();
 
 </script>
