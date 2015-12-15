@@ -123,7 +123,18 @@ app.get('/register', function(req, res) {
   res.end();
 });
 
-
+app.get('/cart', function(req, res) {
+	var chunk = '';
+	console.log('hi');
+	req.on('data', function(data){
+		chunk += data;
+		console.log(data);
+	})
+	req.on('end', function(data){
+		console.log('hi1');
+		console.log(chunk);
+	})
+});
 
 app.listen(port, function() {
   console.log('App is listening on port ' + port);

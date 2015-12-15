@@ -35,7 +35,14 @@
 <script>
 
 	function checkout(){
-		document.location.href = "checkout.html";
+		if(document.cookie.split('cart=')[1] == undefined){
+			document.cookie = 'cart=[];expires Fri Jan 1 2016';
 		}
+		var cart = JSON.parse(document.cookie.split('cart=')[1].split(';')[0]);
+cart[cart.length] = window.location.search.split('?name=')[1];
+document.cookie = 'cart=' + JSON.stringify(cart) + ';expires Fri Jan 1 2016';
+		console.log(window.location.search.split('?name=')[1]);
+		document.location.href = "checkout.html";
+	}
 </script>
 </html>

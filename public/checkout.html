@@ -8,10 +8,8 @@
 		<a href="index.html"> Put logo here! </a> 
 	</header>
 	<div>
-		<ul>
-			<li> hey </li>
-			<li> cart items and price here </li>
-		</ul>
+		<ol id='cart'>
+		</ol>
 		<br>
 		<br>
 		<p id="total"> <span style="text-decoration: underline">Total Price:</span> &nbsp&nbsp&nbsp&nbsp&nbsp</p>
@@ -23,6 +21,19 @@
 	
 	<script>
 	
+	var cart = document.cookie.split('cart=')[1];
+	if(cart != undefined){
+var req = new XMLHttpRequest();
+req.open('GET', '/cart');
+req.send('hello');
+
+req.onreadystatechange = function() {
+if(req.readyState == XMLHttpRequest.DONE && req.status === 200){
+}
+}
+console.log(cart);
+	}
+
 	function buy(){
 		var r = confirm("Are you sure you would like to make this purchase?");
 		if (r == true){
