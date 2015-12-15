@@ -23,13 +23,14 @@ ul {
   top: 450px;
   padding: 100px;
   list-style-type: none;
+
 }
 
 li{
-	width: 30%;
+	width: 300px;
 	float: left;
-	margin: 20px;
 	padding: 5px;
+
 }
 
 input {
