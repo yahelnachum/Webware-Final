@@ -2,15 +2,6 @@ body{
 	background-color: white;
 }
 
-header{
-	background-color: gray;
-	height: 150px;
-	width: 100%;
-	margin: auto;
-	text-align: center;
-	padding: 20px;
-}
-
 .product{
 	width: 50%;
 	margin: auto;
