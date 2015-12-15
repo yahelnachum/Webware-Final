@@ -27,6 +27,7 @@ div.forms {
 }
 
 .miniFeaturedPage {
+  font-size: 2em;
 	width: 30%;
 	float: left;
 	display: inline-block;
@@ -47,7 +48,7 @@ input {
 	background-color: #8c8c8c;
 	width: 100%;
 	margin: auto;
-	height: 400px;
+	height: 500px;
 	top: 150px;
 	margin-top: 0px;
 	box-sizing: border-box
