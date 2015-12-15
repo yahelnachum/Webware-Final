@@ -30,7 +30,9 @@ li{
 	width: 300px;
 	float: left;
 	padding: 5px;
-
+	height: 450px;
+	margin: auto;
+	text-align: center;
 }
 
 input {
