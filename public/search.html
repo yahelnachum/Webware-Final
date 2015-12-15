@@ -20,12 +20,8 @@
   <p style= "text-align: right padding: 20px"> <a href= "checkout.html">My Cart</a></p>
   </header>
 
-  <section id = "banner"> 
-  Here we will put featured products
-  </section>
-  <br>
-  <ul id="hats">
-  </ul>
+  <div id="content">
+  </div>
 </body>
 
  
@@ -35,7 +31,7 @@ var req = new XMLHttpRequest();
 req.onreadystatechange = function() {
 if(req.readyState == XMLHttpRequest.DONE && req.status === 200){
 	var hatObjList = JSON.parse(req.responseText);
-	var hatList = document.getElementById('hats');
+	var hatList = document.getElementById('content');
 	console.log('here1');
 	hatObjList.forEach(function (el, index) {
 		hatList.innerHTML += compiled({el});
@@ -45,7 +41,7 @@ if(req.readyState == XMLHttpRequest.DONE && req.status === 200){
 }
 }
 console.log('hello');
-req.open('GET', '/list?search=');
+req.open('GET', window.location.pathname + window.location.search + '&data=true');
 req.send();
 
 </script>

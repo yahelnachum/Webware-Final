@@ -46,6 +46,7 @@ app.get('/list', function(req, res) {
   var searchQuery = query.search;
   var coneNameList = listOfPartyHats();
 
+  if(req.query.data){
   if(searchQuery != undefined){
   var filtered = coneNameList.filter(function(el) {
     if(el.fullName.toLowerCase().indexOf(searchQuery.toLowerCase()) > -1){
@@ -54,7 +55,11 @@ app.get('/list', function(req, res) {
   });
   res.send(filtered);
   }
-  res.end();
+res.end();
+  }
+  else{
+    res.sendFile(path.join(__dirname, '/public/search.html'));
+  }
 });
 
 function listOfPartyHats(){
