@@ -1,0 +1,10 @@
+name=Mean Girls Party Hat
+price=$300.99
+
+description:
+So fetch. On Wednesdays we wear party hats
+END
+
+features:
+Does not protect you from buses, comes with your own personal Burn Book
+END
