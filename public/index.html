@@ -43,20 +43,60 @@ if(req.readyState == XMLHttpRequest.DONE && req.status === 200){
 	});
 	console.log('here1');
 
-	var numOfFeatured = 3;
-	console.log(parseInt(Math.random() * 3) + 1);
-	var bannerElement = document.getElementById("featuredHats");
-	while(numOfFeatured != 0){
+	var featuredHats = []
+	while(featuredHats.length < 3){
+		var bannerElement = document.getElementById("featuredHats");
 		var index = parseInt(Math.random() * hatObjList.length);
 		var el = hatObjList[index];
+		while(!isUniqueHat(el, featuredHats)){
+		index = parseInt(Math.random() * hatObjList.length);
+		el = hatObjList[index];
+		}
+		featuredHats[featuredHats.length] = el;
 		bannerElement.innerHTML += compiled({el}).replace("miniPage", "miniFeaturedPage");
-		numOfFeatured -= 1;
+	}
+
+	if(anyIlluminati(featuredHats)){
+		bannerElement.innerHTML = "";
+		var el = getIlluminati(featuredHats);
+		bannerElement.innerHTML += compiled({el}).replace("miniPage", "miniFeaturedPage");
+		bannerElement.innerHTML += compiled({el}).replace("miniPage", "miniFeaturedPage");
+		bannerElement.innerHTML += compiled({el}).replace("miniPage", "miniFeaturedPage");
+		bannerElement.innerHTML += ""+
+							"<audio controls autoplay hidden>"+
+							"<source src=\"party_hats/illuminati/Illuminati Confirmed Sound Effect.mp3\" type=\"audio/mp3\">" +
+							"</audio>"
 	}
 }
 }
 console.log('hello');
 req.open('GET', '/list?search=&data=true');
 req.send();
-</script>
 
+function isUniqueHat(el, featuredHats){
+	for(var i = 0; i < featuredHats.length; i++){
+		if(el.fullName.indexOf(featuredHats[i].fullName) != -1){
+			return false;
+		}
+	}
+	return true;
+}
+
+function anyIlluminati(featuredHats){
+	for(var i = 0; i < featuredHats.length; i++){
+		if(featuredHats[i].folderName.indexOf('illuminati') != -1){
+			return true;
+		}
+	}
+	return false;
+}
+
+function getIlluminati(featuredHats){
+	for(var i = 0; i < featuredHats.length; i++){
+		if(featuredHats[i].folderName.indexOf('illuminati') != -1){
+			return featuredHats[i];
+		}
+	}	
+}
+</script>
 </html>

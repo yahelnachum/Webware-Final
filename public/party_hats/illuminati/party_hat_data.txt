@@ -2,6 +2,9 @@ name=Illuminati Party Hat
 price=$6.66
 
 description:
+<audio controls autoplay hidden>
+<source src="party_hats/illuminati/Illuminati Confirmed Sound Effect.mp3" type="audio/mp3">
+</audio>
 Status confirmed
 END
 
