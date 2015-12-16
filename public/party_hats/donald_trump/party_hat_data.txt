@@ -1,0 +1,10 @@
+name=The Donald Party Hat
+price=$39.99
+
+description:
+Make America Great Again
+END
+
+features:
+Guaranteed to make your boss say "You're Fired!"
+END
