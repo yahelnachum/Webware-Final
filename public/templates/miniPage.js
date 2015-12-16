@@ -1,3 +1,7 @@
+// Author Jillian Hennessy
+// Author Yahel Nachum
+// Website http://jh-yn-final-cs4241.herokuapp.com/
+
 var compiled = _.template(
 "<li class='miniPage'><a href=\"product?name=<%= el.folderName %>\">" +
 "<img class='miniImg' src=\"<%= el.imgSrc %>\" />" +
