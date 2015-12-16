@@ -52,7 +52,7 @@ if(req.readyState == XMLHttpRequest.DONE && req.status === 200){
 function buy(){
 	var r = confirm("Are you sure you would like to make this purchase?");
 	if (r == true){
-		document.cookie = 'cart=';
+		document.cookie = 'cart=[]';
 		document.location.href = "index.html";
 	}
 };
