@@ -40,6 +40,7 @@ function createProductPage(name){
   finishedHatPage = finishedHatPage.replace('DescriptionPlaceholder',description);
   finishedHatPage = finishedHatPage.replace('PricePlaceholder',price);
   finishedHatPage = finishedHatPage.replace('FeaturesPlaceholder',features);
+  finishedHatPage = finishedHatPage.replace('titlePlaceholder',fullName);
   return finishedHatPage;
 }
 
