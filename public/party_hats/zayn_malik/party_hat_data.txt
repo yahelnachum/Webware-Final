@@ -1,0 +1,10 @@
+name=Zayn Malik Party Hat
+price=$19.99
+
+description:
+Break away from your friends with this Zayn-y party hat
+END
+
+features:
+Zayn in multiple directions
+END
