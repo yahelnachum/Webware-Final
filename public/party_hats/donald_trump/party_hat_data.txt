@@ -1,5 +1,5 @@
 name=The Donald Party Hat
-price=$39.99
+price=$2016.99
 
 description:
 Make America Great Again
