@@ -1,0 +1,10 @@
+name=Space Jame Party Hat
+price=$23.23
+
+description:
+Welcome to the best party hat in and out of this world! It's you chance, do your dance in this one of a kind hat.
+END
+
+features:
+Guaranteed to make your boss say "You're Fired!"
+END
