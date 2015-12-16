@@ -9,6 +9,7 @@ var bodyParser = require("body-parser");
 var pg = require('pg');
 var fs = require('fs');
 var bcrypt = require('bcryptjs');
+
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.use(express.static(path.join(__dirname, '/public')));
@@ -38,6 +39,7 @@ function createProductPage(name){
   finishedHatPage = finishedHatPage.replace('NamePlaceholder',fullName);
   finishedHatPage = finishedHatPage.replace('DescriptionPlaceholder',description);
   finishedHatPage = finishedHatPage.replace('PricePlaceholder',price);
+  finishedHatPage = finishedHatPage.replace('FeaturesPlaceholder',features);
   return finishedHatPage;
 }
 
