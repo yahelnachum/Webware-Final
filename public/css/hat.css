@@ -6,10 +6,7 @@ body{
 	width: 50%;
 	margin: auto;
 	text-align: left;
-	border-style: solid;
-	height: 550px;
 	padding: 20px;
-	box-sizing: border-box;
 }
 
 ul{
