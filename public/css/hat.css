@@ -7,8 +7,9 @@ body{
 	margin: auto;
 	text-align: left;
 	border-style: solid;
-	height: max-height;
+	height: 450px;
 	padding: 20px;
+	box-sizing: border-box;
 }
 
 ul{
