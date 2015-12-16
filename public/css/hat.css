@@ -7,7 +7,7 @@ body{
 	margin: auto;
 	text-align: left;
 	border-style: solid;
-	height: min-height;
+	height: max-height;
 	padding: 20px;
 }
 
@@ -37,7 +37,7 @@ li{
 
 #buy{
 position: absolute;
-top: 500px;
+top: 700px;
 cursor: pointer;
 padding: 20px 20px;
 }
