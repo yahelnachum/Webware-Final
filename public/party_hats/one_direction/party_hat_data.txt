@@ -1,0 +1,10 @@
+name=One Direction Party Hat
+price=$49.99
+
+description:
+For the fangirl in all of us
+END
+
+features:
+Zayn Malik party hat not included
+END
