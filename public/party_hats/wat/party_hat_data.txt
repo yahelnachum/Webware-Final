@@ -1,0 +1,10 @@
+name=Wat Party Hat
+price=$19.99
+
+description:
+Wat
+END
+
+features:
+WAT
+END

@@ -1,0 +1,10 @@
+name=Power Rangers Party Hat
+price=$19.99
+
+description:
+Go Go Party Ragers!
+END
+
+features:
+Spandex suits sold separately 
+END

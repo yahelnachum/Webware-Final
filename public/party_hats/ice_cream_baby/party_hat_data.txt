@@ -1,0 +1,10 @@
+name=Ice Cream Baby Party Hat
+price=$39.99
+
+description:
+You like ice cream.. don't you...
+END
+
+features:
+Nightmare inducing design
+END

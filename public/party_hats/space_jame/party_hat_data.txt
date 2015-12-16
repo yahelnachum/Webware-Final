@@ -6,5 +6,5 @@ Welcome to the best party hat in and out of this world! It's you chance, do your
 END
 
 features:
-Guaranteed to make your boss say "You're Fired!"
+Bad spelling
 END
