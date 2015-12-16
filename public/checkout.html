@@ -56,5 +56,19 @@ function buy(){
 		document.location.href = "index.html";
 	}
 };
+
+function removeFromCart(folderName){
+	console.log('you did it');
+	var cart = JSON.parse(document.cookie.split('cart=')[1].split(';')[0]);
+	for(var i = 0; i < cart.length; i++){
+		if(cart[i].indexOf(folderName) != -1){
+			console.log('you did it again');
+			cart.splice(i, 1);
+			document.cookie = 'cart=' + JSON.stringify(cart) + ';expires Fri Jan 1 2016';
+			i = cart.length;
+			document.location.href = "checkout.html";			
+		}
+	}
+}
 </script>
 </html>

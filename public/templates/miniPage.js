@@ -7,8 +7,9 @@ var compiled = _.template(
 );
 
 var checkoutCompiled = _.template(
-"<li class='checkoutMiniPage'>" +
+"<li id='<%= el.folderName %>' class='checkoutMiniPage'>" +
 "<h1 class='checkoutName'><%= el.fullName %></h1>" +
-"<h2 class='heckoutPrice'><%= el.price %></h2>" +
+"<button class='checkoutButton' onclick='removeFromCart(\"<%= el.folderName %>\")'>Remove</button>" +
+"<h2 class='checkoutPrice'><%= el.price %></h2>" +
 "</li>"
 );
