@@ -7,6 +7,5 @@ goes with any outfit and can be worn to any occasion.
 END
 
 features:
--Good for any Occasion
--Minimalist style
+Good for any Occasion, Minimalist style
 END

@@ -9,5 +9,5 @@ Status confirmed
 END
 
 features:
--Secret
+Secret
 END

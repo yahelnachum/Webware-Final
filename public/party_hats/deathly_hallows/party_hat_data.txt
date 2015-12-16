@@ -6,5 +6,5 @@ For the Harry Potter fan, this hat gives you a magical experience no matter the 
 END
 
 features:
--Elder Wand not included
+Elder Wand not included
 END

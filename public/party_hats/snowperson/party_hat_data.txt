@@ -6,5 +6,5 @@ Almost as festive as the Starbucks hat
 END
 
 features:
--Comes with a carrot in case that's why you like snowmen
+Comes with a carrot in case that's why you like snowmen
 END

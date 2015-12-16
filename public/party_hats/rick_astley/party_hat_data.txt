@@ -9,6 +9,5 @@ Never gonna give you up, never gonna let you down
 END
 
 features:
--Plays music so you can Rick roll everyone in style
--Never gonna run around and desert you
+Plays music so you can Rick roll everyone in style, Never gonna run around and desert you
 END

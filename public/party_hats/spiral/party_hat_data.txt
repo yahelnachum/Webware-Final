@@ -6,5 +6,5 @@ Like the sectioned party hat, but with more fun!
 END
 
 features:
--Spiral design everyone will love
+Spiral design everyone will love
 END

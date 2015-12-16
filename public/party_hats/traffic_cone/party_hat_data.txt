@@ -6,5 +6,5 @@ Impress all your construction worker friends with this special edition party hat
 END
 
 features:
--Stops traffic
+Stops traffic
 END

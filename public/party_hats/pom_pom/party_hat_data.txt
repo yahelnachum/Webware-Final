@@ -6,5 +6,5 @@ Like a regular party hat... but with a pom pom
 END
 
 features:
--Pom Pom 
+Pom Pom 
 END

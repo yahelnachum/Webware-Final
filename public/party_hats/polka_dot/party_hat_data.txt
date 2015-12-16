@@ -6,5 +6,5 @@ Perfect for birthdays, or if you're a clown!
 END
 
 features:
--A lot of circles!
+A lot of circles!
 END

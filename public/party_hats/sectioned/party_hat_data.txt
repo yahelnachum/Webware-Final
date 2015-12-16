@@ -6,5 +6,5 @@ Classic stlye design and goes with any outfit
 END
 
 features:
--Many sections
+Many sections
 END

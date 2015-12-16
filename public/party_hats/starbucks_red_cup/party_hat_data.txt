@@ -8,5 +8,5 @@ up to date with this trendy social topic.
 END
 
 features:
--Good conversation starter
+Good conversation starter
 END
