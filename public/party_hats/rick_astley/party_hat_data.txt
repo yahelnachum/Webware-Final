@@ -2,6 +2,9 @@ name=Rick Astley Party Hat
 price=$39.99
 
 description:
+<audio controls autoplay hidden>
+<source src="party_hats/rick_astley/Rick Astley - Never Gonna Give You Up.mp3" type="audio/mp3">
+</audio>
 Never gonna give you up, never gonna let you down
 END
 

@@ -68,7 +68,7 @@ function listOfPartyHats(){
   folderList.forEach(function (folder, i){
     var data = fs.readFileSync(path.join(__dirname, '/public/party_hats/', folder, '/party_hat_data.txt')).toString();
     var coneObj = {imgSRC:"",fullName:"",price:"",folderName:""};
-    coneObj.imgSrc = 'http://jh-yn-final-cs4241.herokuapp.com/party_hats/' + folder + '/party_hat_img.jpg';
+    coneObj.imgSrc = 'party_hats/' + folder + '/party_hat_img.jpg';
     coneObj.fullName = ((data.split('name='))[1].split('\n'))[0];
     coneObj.price = ((data.split('price='))[1].split('\n'))[0];
     coneObj.folderName = folder;
@@ -123,17 +123,26 @@ app.get('/register', function(req, res) {
   res.end();
 });
 
-app.get('/cart', function(req, res) {
-	var chunk = '';
-	console.log('hi');
+app.post('/cart', function(req, res) {
+	var chunk = "";
 	req.on('data', function(data){
 		chunk += data;
-		console.log(data);
-	})
+	});
 	req.on('end', function(data){
-		console.log('hi1');
-		console.log(chunk);
-	})
+		var cart = JSON.parse(chunk);
+		var partyHatList = listOfPartyHats();
+		var cartList = [];
+		for(var i = 0; i < cart.length; i++){
+			for(var j = 0; j < partyHatList.length; j++){
+				if(cart[i].indexOf(partyHatList[j].folderName) != -1){
+					cartList[i] = partyHatList[j];
+					j = partyHatList.length;
+				}
+			}
+		}
+		res.send(JSON.stringify(cartList));
+		res.end();
+	});
 });
 
 app.listen(port, function() {

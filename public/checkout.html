@@ -2,6 +2,8 @@
 	<head>
 		<title>Checkout</title>
 		<link rel="stylesheet" href="css/checkout.css">
+	    <script type='text/javascript' src="http://underscorejs.org/underscore-min.js"></script>
+	    <script type='text/javascript' src="templates/miniPage.js"></script>
 	</head>
   <body>
     <header>
@@ -14,31 +16,43 @@
 		<br>
 		<p id="total"> <span style="text-decoration: underline">Total Price:</span> &nbsp&nbsp&nbsp&nbsp&nbsp</p>
 		<p></p>
-		<p id="price"> $$$ &nbsp&nbsp&nbsp&nbsp&nbsp</p>
+		<p id="price"></p>
 		<button type="button" name="buy" onclick= "buy()"; >Confirm Purchase</button>
 	</div>
 	</body>
 	
-	<script>
+<script>
 	
-	var cart = document.cookie.split('cart=')[1];
-	if(cart != undefined){
+var cart = document.cookie.split('cart=')[1];
+if(cart != undefined){
 var req = new XMLHttpRequest();
-req.open('GET', '/cart');
-req.send('hello');
+req.open('POST', '/cart');
+req.send(cart);
 
 req.onreadystatechange = function() {
 if(req.readyState == XMLHttpRequest.DONE && req.status === 200){
-}
-}
-console.log(cart);
-	}
+	var hatObjList = JSON.parse(req.responseText);
+	var hatList = document.getElementById('cart');
+	console.log('here1');
+	var totalPrice = 0;
+	hatObjList.forEach(function (el, index) {
+		hatList.innerHTML += checkoutCompiled({el});
+	totalPrice += parseFloat(el.price.substr(1));
+	});
 
-	function buy(){
-		var r = confirm("Are you sure you would like to make this purchase?");
-		if (r == true){
-			document.location.href = "index.html";
-		}
-	};
-	</script>
+	var price = document.getElementById('price');
+	totalPrice = parseInt(totalPrice*100) + "";
+	price.innerHTML += "$" + totalPrice.substr(0, totalPrice.length - 2) + "." + totalPrice.substr(totalPrice.length - 2);
+}
+}
+	console.log(cart);
+}
+
+function buy(){
+	var r = confirm("Are you sure you would like to make this purchase?");
+	if (r == true){
+		document.location.href = "index.html";
+	}
+};
+</script>
 </html>
