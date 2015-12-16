@@ -1,5 +1,6 @@
+// Author Jillian Hennessy
 // Author Yahel Nachum
-// Website http://yn-cs4241-main-a5.herokuapp.com/
+// Website http://jh-yn-final-cs4241.herokuapp.com/
 
 var express = require('express');
 var path = require('path');
