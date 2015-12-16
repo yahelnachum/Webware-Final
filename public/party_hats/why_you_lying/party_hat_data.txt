@@ -1,0 +1,10 @@
+name=Why You Always Lying Party Hat
+price=$100.99
+
+description:
+Why you always lying? MMMMOHMYGOD Stop ****** lying... and start buying this limited edition party hat
+END
+
+features:
+Ability to easily call out all the liars in your life
+END
