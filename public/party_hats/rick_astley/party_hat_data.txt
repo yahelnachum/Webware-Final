@@ -1,5 +1,5 @@
 name=Rick Astley Party Hat
-price=$39.99
+price=$19.87
 
 description:
 <audio controls autoplay hidden>
