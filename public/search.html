@@ -12,15 +12,14 @@
   <header id = "top">
   <div class="forms">
   <form action="/list">
-    <label for="POST-search">  <a href= "index.html">Insert image</a></label>
     <input id="POST-search" type="text" name="search" placeholder= "Search for hats">
     <input id="POST-submit" type="submit" value="Submit">
   </form>
   </div>
-  <p style= "text-align: right padding: 20px"> <a href= "checkout.html">My Cart</a></p>
+  <p style= "text-align: right padding: 20px; transform:translateY(-100px);"> <a href= "index.html">Home</a>&nbsp&nbsp&nbsp&nbsp<a href= "checkout.html">My Cart</a></p>
   </header>
 
-  <ul id="content">
+  <ul id="hats">
   </ul>
 </body>
 
@@ -31,10 +30,10 @@ var req = new XMLHttpRequest();
 req.onreadystatechange = function() {
 if(req.readyState == XMLHttpRequest.DONE && req.status === 200){
 	var hatObjList = JSON.parse(req.responseText);
-	var hatList = document.getElementById('content');
+	var hatList = document.getElementById('hats');
 	console.log('here1');
 	hatObjList.forEach(function (el, index) {
-		hatList.innerHTML += el;
+		hatList.innerHTML += compiled({el});
            console.log(compiled({el}));
 	});
 	console.log('here1');
