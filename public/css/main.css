@@ -39,6 +39,11 @@ div.forms {
 	box-sizing: border-box;
 }
 
+.miniFeaturedPage img {
+	background-color: white;
+	border-radius: 30px;
+}
+
 input {
   font-size: 0.9em;
 }
@@ -86,30 +91,34 @@ a:link{
 }
 
 a:visited{
-	color: rgb(200,200,200);
+	color: rgb(50,50,50);
 }
 
 a:hover{
-	color: rgb(200,200,200);
+	color: rgb(100,100,100);
 }
 
 a:active{
-	color: rgb(200,200,200);
+	color: rgb(50,50,50);
 }
-
 
 .miniPage{
 	width: 300px;
 	float: left;
-	padding: 5px;
-	margin: auto;
-	height: 450px;
+	padding: 30px 10px 10px 10px;
+	margin: 10px;
+	height: 500px;
 	text-align: center;
 	box-sizing: border-box;
+	background-color: rgb(240,240,240);
+	border-radius: 50px;
+	box-shadow: 5px 5px 5px rgb(200,200,200);
 }
 
 .miniImg {
-  width: 300px;
+  width: 250px;
+  background-color: white;
+  border-radius: 30px;
 }
 
 .miniName {
@@ -118,4 +127,8 @@ a:active{
 
 .miniPrice {
   font-size: 0.75em;
+}
+
+a {
+  text-decoration: none;
 }
