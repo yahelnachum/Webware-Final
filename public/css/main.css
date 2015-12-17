@@ -10,8 +10,7 @@ div.forms {
   font-size: 40px;
   padding: 5px;
   background-color: gray;
-  float: center;
-  width: 50%;
+  width: 75%;
   text-align: center;
   margin: auto;
   height: 90%;
@@ -20,24 +19,24 @@ div.forms {
 
 #hats {
   font-size: 2em;
-
+  width: 80%;
   top: 450px;
   padding: 100px;
   list-style-type: none;
-
+  margin: auto;
 }
 
 .miniFeaturedPage {
-  font-size: 2em;
-	width: 30%;
+     font-size: 2em;
+	width: 33%;
 	float: left;
 	display: inline-block;
 	padding: 5px;
 	height: 200px;
 	margin: auto;
 	text-align: center;
-  list-style-type: none;
-	border-sizing: border-box;
+     list-style-type: none;
+	box-sizing: border-box;
 }
 
 input {
@@ -52,8 +51,10 @@ input {
 	height: 500px;
 	top: 150px;
 	margin-top: 0px;
-	box-sizing: border-box
+	box-sizing: border-box;
 }
+
+
 
 #top{
 	width: 100%;
@@ -96,13 +97,15 @@ a:active{
 	color: rgb(200,200,200);
 }
 
+
 .miniPage{
 	width: 300px;
 	float: left;
 	padding: 5px;
-	height: 450px;
 	margin: auto;
+	height: 450px;
 	text-align: center;
+	box-sizing: border-box;
 }
 
 .miniImg {
