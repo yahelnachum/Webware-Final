@@ -41,11 +41,14 @@ if(req.readyState == XMLHttpRequest.DONE && req.status === 200){
 	var totalPrice = 0;
 	hatObjList.forEach(function (el, index) {
 		hatList.innerHTML += checkoutCompiled({el});
-	totalPrice += parseFloat(el.price.substr(1));
+		totalPrice += parseFloat(el.price.substr(1));
+		console.log(parseFloat(el.price.substr(1)));		
 	});
 
 	var price = document.getElementById('price');
-	totalPrice = parseInt(totalPrice*100) + "";
+	console.log(totalPrice);
+	totalPrice = parseInt(totalPrice*100 + 0.001) + "";
+	console.log(totalPrice);
 	price.innerHTML += "$" + totalPrice.substr(0, totalPrice.length - 2) + "." + totalPrice.substr(totalPrice.length - 2);
 }
 }
