@@ -119,7 +119,7 @@ a:active{
 }
 
 .miniPage{
-	width: 325px;
+	width: 320px;
 	float: left;
 	padding: 10px 0px 0px 0px;
 	margin: 10px;
@@ -132,7 +132,7 @@ a:active{
 }
 
 .miniImg {
-  width: 310px;
+  width: 300px;
   background-color: white;
   border-radius: 30px;
 }
